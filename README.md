@@ -2,7 +2,7 @@
 
 This project is a Machine Learning application designed to analyze resumes, identify skill gaps, and recommend suitable job opportunities. The goal is to help job seekers understand their strengths and weaknesses and match with roles that fit their profile.
 
-###  **Table of Contents**
+### Table of Contents
 - About
 - Features
 - Tach Stack
@@ -15,6 +15,16 @@ Many job seekers struggle to match their resumes with job opportunities effectiv
 
 Organizations and job platforms can also use this system to automate resume-job matching and provide actionable insights
 
-### **Features**
+### **Features**<br>
 ---
-bjskks
+-Resume upload and text extraction (PDF)
+-Skill extraction using NLP
+-Job matching algorithm with match score calculation
+-Skill gap analysis and recommendations
+-Interactive web dashboard (optional) for testing resumes
+-Fully deployable on cloud platforms
+
+
+
+
+
