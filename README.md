@@ -1,52 +1,175 @@
 # Smart Job Recommendation & Resume Analyzer System
 
-This project is a Machine Learning application designed to analyze resumes, identify skill gaps, and recommend suitable job opportunities. The goal is to help job seekers understand their strengths and weaknesses and match with roles that fit their profile.
+ **A practical ML + NLP system that helps job seekers match their resumes with real job roles**
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg)](https://streamlit.io/)
+
+### Prerequisites
+- Python 3.8 or higher
+- Git installed
+- Basic understanding of Python virtual environments
+
 
 ### Table of Contents
-- About
-- Features
-- Tach Stack
-- Project Stucture
-- Installation
-- Usage
 ---
-  ### About
-Many job seekers struggle to match their resumes with job opportunities effectively. This project trains a machine learning model to analyze resume content and compare it with job descriptions. It generates a match score, identifies missing skills, and recommends relevant jobs.
+### Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Setup Guide](#setup-guide)  
+- [Quick Demo](#quick-demo)   
+- [How to Use](#how-to-use)
+- [Troubleshooting](#troubleshooting)
 
-Organizations and job platforms can also use this system to automate resume-job matching and provide actionable insights
+
+### About
+---
+In today’s competitive job market, many candidates struggle to understand why they are not getting selected. This project tackles that exact problem.
+
+The system analyzes a resume, compares it with job descriptions, and provides:
+
+- A matching score
+- Missing skills
+- Recommended job roles
+
+The goal is simple: to help users make smarter, data-driven career decisions.
 
 ### Features
 ---
-- Resume upload and text extraction (PDF)
-- Skill extraction using NLP
-- Job matching algorithm with match score calculation
-- Skill gap analysis and recommendations
-- Interactive web dashboard (optional) for testing resumes
-- Fully deployable on cloud platforms
+- Extracts text and information from resumes (PDF)
+- Identifies skills using NLP techniques
+- Compares resumes with job descriptions
+- Generates a job match score
+- Highlights skill gaps clearly
+- Suggests relevant job roles
+- Optional web interface for interactive use
 
 ### Tech Stack
 ---
-- Programming Language: Python
-- Machine Learning / NLP: Scikit-learn, TF-IDF, Cosine Similarity, SpaCy / NLTK
-- Data Handling: Pandas, NumPy
-- Web Interface (Optional): Streamlit or Flask
-- Experimentation: Jupyter Notebook
-- Deployment: Heroku / Streamlit
+This project is built using:
+
+- Python
+- Pandas & NumPy (data handling)
+- Scikit-learn (ML models)
+- TF-IDF & Cosine Similarity (text matching)
+- SpaCy / NLTK (NLP processing)
+- Streamlit / Heroku
+- Jupyter Notebook (experiments)
+
 
 ### Project Structure
 ---
-  Smart_Job_Recommendation
- ┣ notebook/        # Jupyter notebooks for experimentation
- ┣ src/             # Source code for ML model and utilities
- ┣ templates/       # (Optional) HTML templates for web interface
- ┣ app.py           # (Optional) Web interface for resume testing
- ┣ train.py         # Script to train the ML model
- ┣ requirements.txt # Python dependencies
- ┣ README.md        # Project documentation
+```
+ Smart_Job_Recommendation_-_Resume_Analyzer_System /
+ ├── notebook/ # Jupyter notebooks for experiments
+ ├── src/ # Core Python modules (NLP + ML logic) │ ├── resume_parser.py │ ├── job_matcher.py │ └── skill_extractor.py
+ ├── app.py # Streamlit web application
+ ├── train.py # Model training pipeline
+ ├── requirements.txt # Python dependencies
+ ├── README.md # This documentation
+ └── data/ # Sample resumes and job descriptions (optional)
+ ```
 
-### Installation
+### Quick Demo
+
+1. Upload your resume (PDF/DOCX)
+2. View your extracted skills
+3. See job match scores
+4. Identify skill gaps
+5. Get role recommendations
+
+
+
+### Setup Guide
+
+#### 1. Clone the repository
+```bash
+git clone https://github.com/amritdhami123/Smart_Job_Recommendation_Resume_Analyzer_System.git
+cd Smart_Job_Recommendation_Resume_Analyzer_System
+```
+
+
+#### 2. Create and activate a virtual environment (Recommended)
 ---
-#### Clone the repository
-git clone https://github.com/<your-username>/Smart_Job_Recommendation.git
-cd Smart_Job_Recommendation
+- Windows:
+```
+python -m venv venv
+venv\Scripts\activate 
+```
+- macOS/Linux:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
+#### 3. Install dependencies
+---
+```
+pip install -r requirements.txt
+``` 
+
+### How to Use
+---
+#### 1. Train the Model
+```
+python train.py
+```
+
+#### 2. Run the Application 
+---
+```
+streamlit run app.py
+```
+
+### Output
+---
+- Resume analysis
+- Job match score
+- Missing skills
+- Suggested roles
+
+### Project Highlights
+---
+- Solves a real-world problem for job seekers  
+- Demonstrates an end-to-end ML pipeline  
+- Combines NLP, Machine Learning, and deployment concepts  
+- Designed to scale for real-world job platforms
+
+### Future Improvements
+
+- Integrate real-time job APIs (LinkedIn, Indeed)
+- Improve skill extraction using deep learning models
+- Add user authentication and profile tracking
+- Deploy on cloud for public access
+
+### Support
+For questions or issues, please:
+1. Check the [Issues](https://github.com/amritdhami123/Smart_Job_Recommendation_Resume_Analyzer_System/issues) page
+2. Contact: - Email: amrit99dhami@gmail.com <br>
+            - LinkedIn: https://www.linkedin.com/in/amritdhami123/
+
+### Troubleshooting
+---
+If you encounter issues during setup or execution, try these solutions:
+
+*   **"Module not found" errors**  
+    *   **Cause:** The virtual environment is not activated or a package is missing.  
+    *   **Fix:** Ensure you see `(venv)` in your terminal. If not, run `venv\Scripts\activate` (Windows) or `source venv/bin/activate` (Mac/Linux). Then run `pip install -r requirements.txt`.
+
+*   **Streamlit command not recognized**  
+    *   **Cause:** Streamlit is not installed in the current environment.  
+    *   **Fix:** Run `pip install streamlit` specifically, or ensure you are inside the activated virtual environment.
+
+*   **Resume parsing fails**  
+    *   **Cause:** The uploaded file is corrupted or in an unsupported format.  
+    *   **Fix:** Ensure you are uploading a clean `.pdf` or `.docx` file. If using `pdfplumber`, ensure it is installed: `pip install pdfplumber`.
+
+*   **NLTK/SpaCy Model Errors**  
+    *   **Cause:** Natural language models are not downloaded.  
+    *   **Fix:** Run these commands in your terminal:  
+        ```bash
+        python -m spacy download en_core_web_sm
+        python -m nltk.downloader punkt
+        ```
