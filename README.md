@@ -8,13 +8,13 @@ This project is a Machine Learning application designed to analyze resumes, iden
 - Project Stucture
 - Installation
 - Usage
-________________________________________________________________________________________________________________________________________________________________________________________
+<br>
 
   ### **About**
 Many job seekers struggle to match their resumes with job opportunities effectively. This project trains a machine learning model to analyze resume content and compare it with job descriptions. It generates a match score, identifies missing skills, and recommends relevant jobs.
 
 Organizations and job platforms can also use this system to automate resume-job matching and provide actionable insights
 
-**
 ### **Features**
-<br>
+---
+bjskks
