@@ -73,7 +73,7 @@ This project is built using:
  ```
 
 ### Quick Demo
-
+---
 1. Upload your resume (PDF/DOCX)
 2. View your extracted skills
 3. See job match scores
@@ -83,7 +83,7 @@ This project is built using:
 
 
 ### Setup Guide
-
+---
 #### 1. Clone the repository
 ```bash
 git clone https://github.com/amritdhami123/Smart_Job_Recommendation_Resume_Analyzer_System.git
@@ -92,7 +92,6 @@ cd Smart_Job_Recommendation_Resume_Analyzer_System
 
 
 #### 2. Create and activate a virtual environment (Recommended)
----
 - Windows:
 ```
 python -m venv venv
@@ -105,7 +104,6 @@ source venv/bin/activate
 ```
 
 #### 3. Install dependencies
----
 ```
 pip install -r requirements.txt
 ``` 
@@ -118,7 +116,7 @@ python train.py
 ```
 
 #### 2. Run the Application 
----
+
 ```
 streamlit run app.py
 ```
